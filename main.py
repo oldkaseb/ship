@@ -1,5 +1,6 @@
-# main.py (entry point)
-from handlers import start
+from loader import dp
+from aiogram import executor
+import handlers
 
-if __name__ == '__main__':
-    start.run()
+if __name__ == "__main__":
+    executor.start_polling(dp, skip_updates=True)
